@@ -14,6 +14,7 @@
    pavucontrol
    alsa-utils
    rofi
+   freerdp
  ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
