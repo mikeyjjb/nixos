@@ -51,16 +51,6 @@
 
   services.xserver.videoDrivers = ["nvidia"];
 
-  home.file.".config/hypr" = {
-    source = ./hyprland;
-    recursive = true;
-  };
-
-  home.file.".config/waybar" = {
-    source = ./waybar;
-    recursive = true;
-  };
-
   programs.hyprland.enable = true;
   programs.waybar.enable = true;
 
