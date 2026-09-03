@@ -1,6 +1,16 @@
 { pkgs, ... }: {
   imports = [ ./michael.nix ];
 
+  home.file.".config/hypr" = {
+    source = ./hyprland;
+    recursive = true;
+  };
+
+  home.file.".config/waybar" = {
+    source = ./waybar;
+    recursive = true;
+  };
+
   programs.vim = {
     enable = true;
     extraConfig = ''
