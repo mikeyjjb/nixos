@@ -2,12 +2,12 @@
   imports = [ ./michael.nix ];
 
   home.file.".config/hypr" = {
-    source = ./hyprland;
+    source = ../applications/hyprland;
     recursive = true;
   };
 
   home.file.".config/waybar" = {
-    source = ./waybar;
+    source = ../applications/waybar;
     recursive = true;
   };
 
