@@ -12,7 +12,7 @@
   environment.systemPackages = with pkgs; [
    alacritty
    discord
-   kdePackages.krdc
+   freerdp
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
