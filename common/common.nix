@@ -25,7 +25,6 @@
     cifs-utils
     zsh
     fastfetch
-    freerdp
   ];
 
   programs.zsh.enable = true;
