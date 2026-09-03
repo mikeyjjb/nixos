@@ -8,6 +8,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+
       radar = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
@@ -24,6 +25,7 @@
           }
         ];
       };
+
       rizzo = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
