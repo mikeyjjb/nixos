@@ -18,7 +18,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.michael = import ./users/michael.nix;
+              users.michael = import ./users/workstation.nix;
               backupFileExtension = "backup";
             };
           }
@@ -34,7 +34,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.michael = import ./users/michael.nix;
+              users.michael = import ./users/workstation.nix;
               backupFileExtension = "backup";
             };
           }
