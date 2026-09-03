@@ -1,0 +1,85 @@
+{ config, pkgs, lib, ... }: 
+
+{
+
+  imports = [
+    ./hardware-configuration.nix
+  ];
+
+  networking.hostName = "radar";
+
+  environment.systemPackages = with pkgs; [
+   alacritty
+   discord
+   pavucontrol
+   alsa-utils
+   rofi
+ ];
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "nvidia-kernel-modules"
+    "nvidia-x11"
+    "nvidia-settings"
+    "nvidia-persistenced"
+    "discord"
+  ];
+
+  powerManagement.enable = false;
+  systemd.sleep.settings.Sleep = {
+    AllowSuspend = "no";
+    AllowHibernation = "no";
+    AllowHybridSleep = "no";
+    AllowSuspendThenHibernate = "no";
+  };
+  systemd.targets.sleep.enable = false;
+  systemd.targets.suspend.enable = false;
+  systemd.targets.hibernate.enable = false;
+  systemd.targets.hybrid-sleep.enable = false;
+
+  services.xserver.videoDrivers = ["nvidia"];
+
+  services.xserver = {
+    enable = true;
+    xkb.layout = "us";
+    xkb.variant = "";
+    autoRepeatDelay = 200;
+    autoRepeatInterval = 35;
+    windowManager.awesome = {
+      enable = true;
+      luaModules = with pkgs.luaPackages; [
+        luarocks
+        luadbi-mysql
+        awesome-wm-widgets
+      ];
+    };
+  };
+
+  services.displayManager.sddm.enable = true;
+  services.displayManager.defaultSession = "none+awesome";
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };  
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    wireplumber.enable = true;
+};
+
+  programs.firefox.enable = true;
+
+}
