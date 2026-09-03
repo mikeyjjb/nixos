@@ -2,6 +2,18 @@
 
 {
 
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --cmd start-hyprland";
+        user = "michael";
+      };
+    };
+  };
+
+  boot.kernelParams = [ "nvidia-drm-fbdev=1" ];
+
   imports = [
     ./hardware-configuration.nix
   ];
@@ -14,7 +26,7 @@
    pavucontrol
    alsa-utils
    rofi
-   freerdp
+   kitty
  ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -39,24 +51,8 @@
 
   services.xserver.videoDrivers = ["nvidia"];
 
-  services.xserver = {
-    enable = true;
-    xkb.layout = "us";
-    xkb.variant = "";
-    autoRepeatDelay = 200;
-    autoRepeatInterval = 35;
-    windowManager.awesome = {
-      enable = true;
-      luaModules = with pkgs.luaPackages; [
-        luarocks
-        luadbi-mysql
-        awesome-wm-widgets
-      ];
-    };
-  };
-
-  services.displayManager.sddm.enable = true;
-  services.displayManager.defaultSession = "none+awesome";
+  programs.hyprland.enable = true;
+  programs.waybar.enable = true;
 
   hardware.graphics = {
     enable = true;
