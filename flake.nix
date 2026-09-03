@@ -11,7 +11,7 @@
       radar = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./common/default.nix
+          ./common/common.nix
           ./computers/radar/configuration.nix
           home-manager.nixosModules.home-manager
           {
@@ -27,7 +27,7 @@
       rizzo = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./common/default.nix
+          ./common/common.nix
           ./cocmputers/rizzo/configuration.nix
           home-manager.nixosModules.home-manager
           {
