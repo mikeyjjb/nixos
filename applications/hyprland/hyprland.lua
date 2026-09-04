@@ -262,7 +262,7 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -show drun"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("alacritty"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("discord"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("firefox"))
-
+hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("waytrogen"))
 
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
