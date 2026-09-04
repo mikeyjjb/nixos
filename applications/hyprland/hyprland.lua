@@ -256,7 +256,7 @@ hl.device({
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 hl.bind(mainMod .. " + CTRL + Return", hl.dsp.layout("swapwithmaster"))
-hl.bind(mainMod .. " + CTRL + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mainMod .. " + ALT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("xfreerdp /v:192.168.1.212 /u:michael /p:0nthebible /size:3440x1440"))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("rofi -show drun"))
