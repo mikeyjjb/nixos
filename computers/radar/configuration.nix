@@ -37,6 +37,7 @@
     "nvidia-settings"
     "nvidia-persistenced"
     "discord"
+    "steam"
   ];
 
   powerManagement.enable = false;
