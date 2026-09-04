@@ -342,8 +342,6 @@ local suppressMaximizeRule = hl.window_rule({
 })
 -- suppressMaximizeRule:set_enabled(false)
 
-windowrule = match:class ^(firefox)$, maximize
-
 hl.window_rule({
     -- Fix some dragging issues with XWayland
     name  = "fix-xwayland-drags",
