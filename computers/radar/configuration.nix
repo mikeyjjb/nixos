@@ -55,10 +55,6 @@
   programs.hyprland.enable = true;
   programs.waybar.enable = true;
 
-  services.hyprpaper = {
-    enable = true;
-};
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
