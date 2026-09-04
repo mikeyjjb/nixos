@@ -53,6 +53,8 @@
 
   services.xserver.videoDrivers = ["nvidia"];
 
+  programs.steam.enable = true;
+
   programs.hyprland.enable = true;
   programs.waybar.enable = true;
 
