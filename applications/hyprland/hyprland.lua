@@ -345,14 +345,6 @@ local suppressMaximizeRule = hl.window_rule({
 windowrule = match:class ^(firefox)$, maximize
 
 hl.window_rule({
-     name = "evefile maximized"
-	 match = {
-			class = "^(evefile.exe)",
-			fullscreen = true,
-	 },
-})
-
-hl.window_rule({
     -- Fix some dragging issues with XWayland
     name  = "fix-xwayland-drags",
     match = {
