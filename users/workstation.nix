@@ -16,6 +16,11 @@
     recursive = true;
   };
 
+  home.file.".config/fastfetch" = {
+    source = ../applications/fastfetch;
+    recursive = true;
+  };
+
   services.hyprpaper = {
     enable = true;
   };
