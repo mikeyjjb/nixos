@@ -37,8 +37,6 @@
     "nvidia-settings"
     "nvidia-persistenced"
     "discord"
-    "steam"
-    "steam-unwrapped"
   ];
 
   powerManagement.enable = false;
@@ -54,8 +52,6 @@
   systemd.targets.hybrid-sleep.enable = false;
 
   services.xserver.videoDrivers = ["nvidia"];
-
-  programs.steam.enable = true;
 
   programs.hyprland.enable = true;
   programs.waybar.enable = true;
