@@ -56,15 +56,7 @@
   programs.waybar.enable = true;
 
   services.hyprpaper = {
-  enable = true;
-  settings = {
-    preload = [ "~/.wallpapers/wallpaper-1.jpg" ];
-    wallpaper = [
-      {
-        "~/.wallpapers/wallpaper-1.jpg"; 
-      }
-    ];
-  };
+    enable = true;
 };
 
   hardware.graphics = {
