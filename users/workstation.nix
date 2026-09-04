@@ -11,6 +11,11 @@
     recursive = true;
   };
 
+  home.file.".config/kitty" = {
+    source = ../applications/kitty;
+    recursive = true;
+  };
+
   programs.vim = {
     enable = true;
     extraConfig = ''
