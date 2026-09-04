@@ -28,7 +28,6 @@
    rofi
    kitty
    waytrogen
-   hyprpaper
  ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -55,6 +54,25 @@
 
   programs.hyprland.enable = true;
   programs.waybar.enable = true;
+
+  services.hyprpaper = {
+  enable = true;
+  settings = {
+    preload = [
+      "~/.wallpapers/wallpaper-1.jpg"
+      "~/.wallpapers/wallpaper-2.jpg"
+      "~/.wallpapers/wallpaper-3.png"
+      "~/.wallpapers/wallpaper-4.jpg"
+      "~/.wallpapers/wallpaper-5.jpg"
+];
+    wallpaper = [
+      {
+        monitor = "";
+        path = "~/.wallpapers/wallpaper-1.jpg"; 
+      }
+    ];
+  };
+};
 
   hardware.graphics = {
     enable = true;
