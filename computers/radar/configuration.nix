@@ -38,6 +38,7 @@
     "nvidia-persistenced"
     "discord"
     "steam"
+    "steam-unwrapped"
   ];
 
   powerManagement.enable = false;
