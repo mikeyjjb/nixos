@@ -58,17 +58,10 @@
   services.hyprpaper = {
   enable = true;
   settings = {
-    preload = [
-      "~/.wallpapers/wallpaper-1.jpg"
-      "~/.wallpapers/wallpaper-2.jpg"
-      "~/.wallpapers/wallpaper-3.png"
-      "~/.wallpapers/wallpaper-4.jpg"
-      "~/.wallpapers/wallpaper-5.jpg"
-];
+    preload = [ "~/.wallpapers/wallpaper-1.jpg" ];
     wallpaper = [
       {
-        monitor = "";
-        path = "~/.wallpapers/wallpaper-1.jpg"; 
+        "~/.wallpapers/wallpaper-1.jpg"; 
       }
     ];
   };
