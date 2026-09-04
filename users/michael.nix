@@ -18,8 +18,8 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
-      buildradar = "sudo nixos-rebuild switch --flake /etc/nixos#radar";
-      buildrizzo = "sudo nixos-rebuild switch --flake /etc/nixos#rizzo";
+      buildradar = "sudo nixos-rebuild switch --flake .#radar";
+      buildrizzo = "sudo nixos-rebuild switch --flake .#rizzo";
     };
     initContent = ''
       unset SSH_ASKPASS
