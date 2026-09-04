@@ -16,6 +16,10 @@
     recursive = true;
   };
 
+  services.hyprpaper = {
+    enable = true;
+  };
+
   programs.vim = {
     enable = true;
     extraConfig = ''
