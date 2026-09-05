@@ -30,6 +30,7 @@
    waytrogen
    freerdp
    hyprpaper
+   gimp
  ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
