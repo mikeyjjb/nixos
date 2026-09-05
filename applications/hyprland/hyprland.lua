@@ -41,8 +41,7 @@ local menu        = "hyprlauncher"
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function ()
-	-- hl.exec_cmd("hyprpaper")
-	hl.exec_cmd("/home/michael/Scripts/wallpaper.zsh")
+    hl.exec_cmd("hyprpaper")
     hl.exec_cmd("waybar")
 end)
 
@@ -264,6 +263,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("discord"))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("waytrogen"))
+hl.bind(mainMos .. " + A", hl.dsp.exec_cmd("~/Scripts/wallpaper.zsh"))
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 --hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
