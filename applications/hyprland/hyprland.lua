@@ -323,7 +323,8 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
-windowrulev2 = tile, class:^(eve)$ windowrulev2 = forceinput, class:^(eve)$
+windowrulev2 = tile, class:^(eve)$ 
+windowrulev2 = forceinput, class:^(eve)$
 
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
