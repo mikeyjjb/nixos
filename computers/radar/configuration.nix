@@ -29,6 +29,7 @@
    kitty
    waytrogen
    freerdp
+   steam
  ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -55,6 +56,8 @@
 
   programs.hyprland.enable = true;
   programs.waybar.enable = true;
+
+  programs.steam.enable = true;
 
   hardware.graphics = {
     enable = true;
