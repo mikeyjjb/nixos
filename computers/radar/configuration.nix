@@ -31,6 +31,7 @@
    freerdp
    hyprpaper
    gimp
+   bulky
  ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
