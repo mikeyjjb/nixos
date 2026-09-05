@@ -37,8 +37,6 @@
     "nvidia-settings"
     "nvidia-persistenced"
     "discord"
-    "steam"
-    "steam-unwrapped"
   ];
 
   powerManagement.enable = false;
@@ -57,9 +55,6 @@
 
   programs.hyprland.enable = true;
   programs.waybar.enable = true;
-
-  programs.steam.enable = true;
-  programs.gamescope.enable = true;
 
   hardware.graphics = {
     enable = true;
