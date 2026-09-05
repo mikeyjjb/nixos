@@ -29,7 +29,6 @@
    kitty
    waytrogen
    freerdp
-   steam
  ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -38,6 +37,8 @@
     "nvidia-settings"
     "nvidia-persistenced"
     "discord"
+    "steam"
+    "steam-unwrapped"
   ];
 
   powerManagement.enable = false;
