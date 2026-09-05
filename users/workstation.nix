@@ -28,7 +28,7 @@
       wallpaper = [
         {
           monitor = "";
-          path = "path = /home/michael/Wallpapers/wallpaper-1.jpg";
+          "path = /home/michael/Wallpapers/wallpaper-1.jpg";
         }
       ];
     };
