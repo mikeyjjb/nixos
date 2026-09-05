@@ -32,6 +32,9 @@
    hyprpaper
    gimp
    bulky
+   ueberzugpp
+   fd
+   _7zz
  ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -40,6 +43,7 @@
     "nvidia-settings"
     "nvidia-persistenced"
     "discord"
+    "unrar"
   ];
 
   powerManagement.enable = false;
