@@ -22,16 +22,16 @@
   };
 
   services.hyprpaper = {
-  enable = true;
-  settings = {
-    splash = false;
-    wallpaper = [
-      {
-        monitor = "";
-        path = "path = /home/michael/Wallpapers/wallpaper-1.jpg";
-      }
-    ];
-   };
+    enable = true;
+    settings = {
+      splash = false;
+      wallpaper = [
+        {
+          monitor = "";
+          path = "path = /home/michael/Wallpapers/wallpaper-1.jpg";
+        }
+      ];
+    };
   };
 
   programs.vim = {
