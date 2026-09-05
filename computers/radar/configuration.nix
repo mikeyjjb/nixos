@@ -59,6 +59,7 @@
   programs.waybar.enable = true;
 
   programs.steam.enable = true;
+  programs.gamescope.enable = true;
 
   hardware.graphics = {
     enable = true;
