@@ -323,10 +323,10 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
-windowrulev2 = tile, class:^(eve)$ 
-windowrulev2 = forceinput, class:^(eve)$
-windowrulev2 = float, class:^(eve-online-launcher)$ 
-windowrulev2 = center, class:^(eve-online-launcher)$
+windowrule = match:class eve, tile
+windowrule = match:class eve, forceinput
+windowrule = match:class eve-online-launcher, float 
+windowrule = match:class eve-online-launcher, center
 
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
