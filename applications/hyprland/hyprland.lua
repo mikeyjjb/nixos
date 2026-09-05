@@ -328,7 +328,7 @@ hl.window_rule({
     class = "^eve$",
   },
   tile = true,
-  forceinput = true,
+  allows_input = true,
 })
 hl.window_rule({
   name = "eve-online-launcher",
